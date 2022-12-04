@@ -52,18 +52,24 @@ def prim(graph, origem):
 def resolve(graph, interseccao):
   origem, destino = interseccao
 
+  # Transforma os paths de tupas para uma tupla facilitando a visualização
   make_path = lambda tup: (*make_path(tup[1]), tup[0]) if tup else ()
 
+  # Chama o Dijkstra para fazer a busca entre dois pontos na MST
   out = dijkstra(graph, origem, destino)
   path = make_path(out[1])
 
+  # Garantir que sempre será o menor valor
   maior_altura = -999999
+
+  # Percorrer cada aresta do path criado para achar a maior altura
   for i in range(len(path) - 1):
     valor = graph[path[i]][path[i+1]] 
     if maior_altura < valor:
       maior_altura = valor
     
-  return maior_altura if maior_altura != -999999 else 0 
+  # Caso tiver continuado a ser o INF negativo ele vai converter para 0
+  return maior_altura if maior_altura != -999999 else 0  
 
 instancia = 1
 while True:
@@ -101,14 +107,18 @@ while True:
   
   print(f"Instancia {instancia}")
 
-  # Vai gerar a arvore geradora mínima
-  origem, destino = interseccoes[0]
+  # Cria um g (grafo) com dicionário
   g = {}
   for node1, node2, value in edges:
     if node1 not in g.keys():
       g[node1] = {}
     g[node1][node2] = value
+  
+  # Desestrutura a origem e chama a função prim para gerar a MST (Minimal Spanning Tree)
+  origem, destino = interseccoes[0]
   mst = prim(g, origem)
+
+  # Passa a mst com as interseções para fazer a busca nelas
   for i in range(k):
     print(resolve(mst, interseccoes[i]))
 

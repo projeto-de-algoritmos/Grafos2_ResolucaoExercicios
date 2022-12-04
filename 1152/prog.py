@@ -29,6 +29,8 @@ def kruskal(edges, v):
   return ret
 
 def resolve(edges, vertices, valor_total):
+  # Aplica o kruskal que irá retornar o valor total da árvore geradora mínima
+  # E subtrai pelo total
   return valor_total - kruskal(edges, vertices)
 
 while True:
@@ -43,6 +45,7 @@ while True:
   edges = []
 
   total = 0
+
   # Cadastra as edges
   for i in range(E):
     line = sys.stdin.readline()
@@ -51,6 +54,6 @@ while True:
 
 
     edges.append((valor, c1, c2))
-    total += valor
+    total += valor # Soma o valor total que a cidade gasta com a iluminação de todas as ruas
 
   print(resolve(edges, V, total))
