@@ -14,12 +14,13 @@ O objetivo desse projeto é aplicar os conhecimentos estudados dentro de algorit
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/54074370/205516512-da296201-2649-4349-80b7-5c0914fb3ac9.png)
-![image](https://user-images.githubusercontent.com/54074370/205516527-fa760df5-fae6-401e-9456-95c213ad0558.png)
-![image](https://user-images.githubusercontent.com/54074370/205516560-be5ca656-d75e-44fe-840b-381a77e78c07.png)
-![image](https://user-images.githubusercontent.com/54074370/205516572-646a7612-927e-4e2b-b414-a8ba42c393da.png)
+![image](https://user-images.githubusercontent.com/54074370/205516512-da296201-2649-4349-80b7-5c0914fb3ac9.png)  
+![image](https://user-images.githubusercontent.com/54074370/205516527-fa760df5-fae6-401e-9456-95c213ad0558.png)  
+![image](https://user-images.githubusercontent.com/54074370/205516560-be5ca656-d75e-44fe-840b-381a77e78c07.png)  
+![image](https://user-images.githubusercontent.com/54074370/205516572-646a7612-927e-4e2b-b414-a8ba42c393da.png)  
 
-
+## Apresentação
+https://github.com/projeto-de-algoritmos/Grafos2_ResolucaoExercicios/blob/master/.github/images/Grafos2_editado.mp4
 
 ## Instalação 
 **Linguagem**: Python<br>
